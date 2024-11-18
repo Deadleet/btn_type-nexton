@@ -1,0 +1,105 @@
+:root {
+  --black-color: #171717;
+  --blackgrey-color: #252525;
+  --blue-color: #1B72E8;
+  --bluelight-color: #66A2F0;
+  --grey-color: #555555;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--black-color);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bigcircleElement {
+  width: 175px;
+  aspect-ratio: 1/1;
+  border: solid 1px var(--grey-color);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hovercircle {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.centercircle {
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-color: var(--bluelight-color);
+  border-radius: 50%;
+  position:relative;
+}
+.square {
+  position:absolute;
+  width: 50px;
+  aspect-ratio: 1/1;
+  border:solid 1px var(--grey-color);
+}
+.circleforturn {
+  position:absolute;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  margin-left:1px;
+  margin-top:1px;
+}
+
+#circle1 {
+  transform: rotate(-45deg) translateX(65px) rotate(-45deg);
+}
+#circle2 {
+  transform: rotate(135deg) translateX(65px) rotate(45deg);
+}
+
+/* 2eme elements */
+.centercircle2 {
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  position:relative;
+}
+
+.circleforconcentrate {
+  position:absolute;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  margin-left:0px;
+  margin-top:0px;
+  top: 0;
+  left: 0;
+}
+
+#circle3 {
+  transform: rotate(-45deg) translateX(65px);
+}
+#circle4 {
+  transform: rotate(135deg) translateX(65px);
+}
+#circle5 {
+  transform: rotate(45deg) translateX(65px);
+}
+#circle6 {
+  transform: rotate(-135deg) translateX(65px);
+}
+
+/* Arrete les interaction : */
+.no-hover {
+  pointer-events: none; /* Empêche toute interaction */
+}
